@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import { paddedNumber } from '../../Common/functions';
 import './Board.css';
 
@@ -14,7 +15,10 @@ const getAdicionalClassName = (ix, history) => {
 const Board = ({ history }) => (
   <div className="board">
     {Array.from({ length: 75 }).map((_, ix) => (
-      <div className={`boardNumber ${getAdicionalClassName(ix, history)}`} key={ix}>
+      <div
+        className={`boardNumber ${getAdicionalClassName(ix, history)} ${isMobile ? 'mobile' : ''}`}
+        key={ix}
+      >
         {paddedNumber(ix + 1)}
       </div>
     ))}

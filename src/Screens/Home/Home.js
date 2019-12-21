@@ -1,38 +1,21 @@
 import React, { useState } from 'react';
-import {
-  Header,
-  LeftMenu,
-  Board,
-  Button,
-} from './Components';
-import {
-  bingo,
-  line,
-  newNumber,
-  repeatNumber,
-} from './Common/functions';
-import './Home.css';
+import { BrowserView, MobileView } from 'react-device-detect';
+import DesktopHome from './DesktopHome';
+import MobileHome from './MobileHome';
 
 const Home = () => {
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState([42, 13, 7, 69]);
 
   return (
-    <div className="wrapper">
-      <Header />
-      <main className="container">
-        <LeftMenu history={history} />
-        <div className="boardContainer">
-          <Board history={history} />
-        </div>
-      </main>
-      <div className="buttons">
-        <Button text="Novo Número" onPress={newNumber(setHistory, history)} />
-        <Button text="Repetir Número" onPress={repeatNumber(history)} />
-        <Button text="Linha" onPress={line} />
-        <Button text="BINGO!" isBingo onPress={bingo(setHistory)} />
-      </div>
-    </div>
-  );
+    <>
+      <BrowserView>
+        <DesktopHome history={history} setHistory={setHistory} />
+      </BrowserView>
+      <MobileView>
+        <MobileHome history={history} />
+      </MobileView>
+    </>
+  )
 };
 
 export default Home;

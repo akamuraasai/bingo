@@ -1,0 +1,19 @@
+.lastNumbersBar-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lastNumbersBar-actual {
+    font-size: 56px;
+    margin: 0px 12px;
+}
+
+.lastNumbersBar-number {
+    font-size: 28px;
+    margin: 0px 6px;
+    padding: 0px 0px 0px 12px;
+    border-left: 1px solid #c9c9c9;
+}

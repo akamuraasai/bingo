@@ -25,6 +25,14 @@
     box-shadow: -4px 4px 10px -3px rgba(0,0,0,0.47);
 }
 
+.mobile {
+    font-size: 26px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    margin: 4px;
+}
+
 .boardNumber.red {
     background-color: #ff6d00;
 }

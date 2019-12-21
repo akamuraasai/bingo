@@ -16,7 +16,6 @@ export default class SpeechSynthesis {
 
   static getVoice(selected) {
     const voices = window.speechSynthesis.getVoices();
-    console.log(voices);
     const voice = voices.find(voice => voice.name === selected);
     return voice !== undefined ? voice : voices[0];
   }
