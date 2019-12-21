@@ -22,3 +22,7 @@ export const newNumber = (setHistory, history) => () => {
   const number = getUniqNumber(history);
   setHistory([number, ...history]);
 };
+
+export const bingo = (setHistory) => () => {
+  setHistory([]);
+};
