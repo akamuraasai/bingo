@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './Home.css';
 import {
   Header,
   LeftMenu,
   Board,
   Button,
 } from './Components';
-import { bingo, newNumber } from './Common/functions';
+import { bingo, newNumber, repeatNumber } from './Common/functions';
+import './Home.css';
 
 const Home = () => {
   const [history, setHistory] = useState([]);
@@ -22,7 +22,7 @@ const Home = () => {
       </main>
       <div className="buttons">
         <Button text="Novo Número" onPress={newNumber(setHistory, history)} />
-        <Button text="Repetir Número" />
+        <Button text="Repetir Número" onPress={repeatNumber(history)} />
         <Button text="Linha" />
         <Button text="BINGO!" isBingo onPress={bingo(setHistory)} />
       </div>
