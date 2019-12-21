@@ -2,18 +2,19 @@ import React from 'react';
 import { paddedNumber } from '../../Common/functions';
 import './Board.css';
 
-const getAdicionalClassName = (ix) => {
-  if (ix === 41) {
+const getAdicionalClassName = (ix, history) => {
+  const [last] = history;
+  if (ix + 1 === last) {
     return 'green';
   }
 
-  return [12, 6, 68].indexOf(ix) === -1 ? '' : 'red';
+  return history.indexOf(ix + 1) === -1 ? '' : 'red';
 }
 
-const Board = () => (
+const Board = ({ history }) => (
   <div className="board">
     {Array.from({ length: 75 }).map((_, ix) => (
-      <div className={`boardNumber ${getAdicionalClassName(ix)}`} key={ix}>
+      <div className={`boardNumber ${getAdicionalClassName(ix, history)}`} key={ix}>
         {paddedNumber(ix + 1)}
       </div>
     ))}
