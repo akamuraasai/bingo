@@ -5,7 +5,12 @@ import {
   Board,
   Button,
 } from './Components';
-import { bingo, newNumber, repeatNumber } from './Common/functions';
+import {
+  bingo,
+  line,
+  newNumber,
+  repeatNumber,
+} from './Common/functions';
 import './Home.css';
 
 const Home = () => {
@@ -23,7 +28,7 @@ const Home = () => {
       <div className="buttons">
         <Button text="Novo Número" onPress={newNumber(setHistory, history)} />
         <Button text="Repetir Número" onPress={repeatNumber(history)} />
-        <Button text="Linha" />
+        <Button text="Linha" onPress={line} />
         <Button text="BINGO!" isBingo onPress={bingo(setHistory)} />
       </div>
     </div>
