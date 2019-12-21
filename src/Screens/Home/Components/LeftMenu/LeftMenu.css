@@ -1,0 +1,27 @@
+.leftMenu {
+    padding: 32px;
+}
+
+.actualNumber {
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.actualNumber h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.actualNumber h1 {
+    margin: 0;
+    font-size: 102px;
+    text-align: center;
+}
+
+.number {
+    text-align: center;
+    font-size: 46px;
+    border-bottom: 1px solid #c9c9c9;
+}

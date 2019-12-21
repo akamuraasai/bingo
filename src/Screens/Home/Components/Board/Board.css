@@ -1,0 +1,21 @@
+.board {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 97%;
+    margin: 12px 0px;
+}
+
+.boardNumber {
+    display: flex;
+    font-size: 46px;
+    width: 74px;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(47, 47, 47, 0.51);
+    border-radius: 37px;
+    margin: 8px;
+}
