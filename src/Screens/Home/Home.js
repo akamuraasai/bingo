@@ -9,14 +9,14 @@ const Home = () => (
       <LeftMenu lastNumbers={[13, 7, 69]} actualNumber={42} />
       <div className="boardContainer">
         <Board />
-        <div className="buttons">
-          <Button text="Novo Número" />
-          <Button text="Repetir Número" />
-          <Button text="Linha" />
-          <Button text="BINGO!" />
-        </div>
       </div>
     </main>
+    <div className="buttons">
+      <Button text="Novo Número" />
+      <Button text="Repetir Número" />
+      <Button text="Linha" />
+      <Button text="BINGO!" isBingo />
+    </div>
   </div>
 );
 

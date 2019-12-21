@@ -2,13 +2,13 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    height: 100%;
 }
 
 .container {
     display: flex;
     flex: 1;
     flex-direction: row;
-    margin: 12px 0px;
 }
 
 .buttons {
@@ -17,6 +17,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
-    width: 95%;
+    padding: 14px;
+    background-color: #29434e;
 }
