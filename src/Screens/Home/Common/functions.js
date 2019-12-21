@@ -38,12 +38,12 @@ export const newNumber = (setHistory, history) => async () => {
   }
   const number = getUniqNumber(history);
   await callSpeech(number);
-  setHistory([number, ...history]);
+  setHistory(number);
 };
 
-export const bingo = (setHistory) => async () => {
+export const bingo = () => async () => {
   await callSpeech(0, 'Biiingo! Um jogador fez BINGO!');
-  setHistory([]);
+  // setHistory([]);
 };
 
 export const line = async () => {

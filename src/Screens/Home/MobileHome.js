@@ -5,7 +5,7 @@ import './Home.css';
 const MobileHome = ({ history }) => (
   <div className="wrapper">
     <MobileHeader history={history} />
-    <main className="container">
+    <main className="container-mobile">
       <div className="boardContainer">
         <Board history={history} />
       </div>
