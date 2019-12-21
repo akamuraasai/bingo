@@ -5,6 +5,7 @@
 }
 
 .title {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex: 1;
     justify-content: center;

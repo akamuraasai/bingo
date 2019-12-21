@@ -3,6 +3,7 @@
 }
 
 .actualNumber {
+    font-family: 'Lato', sans-serif;
     border: 1px solid #c9c9c9;
     border-radius: 4px;
     padding: 20px;
@@ -10,7 +11,7 @@
 
 .actualNumber h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
 }
 
@@ -21,6 +22,7 @@
 }
 
 .number {
+    font-family: 'Lato', sans-serif;
     text-align: center;
     font-size: 46px;
     border-bottom: 1px solid #c9c9c9;
