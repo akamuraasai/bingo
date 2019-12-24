@@ -6,6 +6,19 @@
     width: 100%;
 }
 
+.plus-button {
+    position: fixed;
+    top: 12px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    background-color: #508398;
+    border-radius: 18px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .title-mobile {
     font-family: 'Open Sans', sans-serif;
     display: flex;

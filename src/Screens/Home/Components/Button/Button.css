@@ -15,3 +15,7 @@
 .button.bingo {
     background-color: #1976d2;
 }
+
+.fluid {
+    width: 100%;
+}

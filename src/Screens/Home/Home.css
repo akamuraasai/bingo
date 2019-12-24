@@ -15,7 +15,7 @@
     margin-top: 120px;
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .buttons {
@@ -26,4 +26,8 @@
     justify-content: space-between;
     padding: 14px;
     background-color: #29434e;
+}
+
+.ticket {
+    padding: 20px;
 }
