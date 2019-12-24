@@ -41,9 +41,9 @@ export const newNumber = (setHistory, history) => async () => {
   setHistory(number);
 };
 
-export const bingo = () => async () => {
+export const bingo = (newBingo) => async () => {
   await callSpeech(0, 'Biiingo! Um jogador fez BINGO!');
-  // setHistory([]);
+  newBingo();
 };
 
 export const line = async () => {

@@ -13,7 +13,7 @@ import {
 } from './Common/functions';
 import './Home.css';
 
-const DesktopHome = ({ history, setHistory }) => (
+const DesktopHome = ({ history, setHistory, newBingo }) => (
   <div className="wrapper">
     <Header />
     <main className="container">
@@ -26,7 +26,7 @@ const DesktopHome = ({ history, setHistory }) => (
       <Button text="Novo Número" onPress={newNumber(setHistory, history)} />
       <Button text="Repetir Número" onPress={repeatNumber(history)} />
       <Button text="Linha" onPress={line} />
-      <Button text="BINGO!" isBingo onPress={bingo(setHistory)} />
+      <Button text="BINGO!" isBingo onPress={bingo(newBingo)} />
     </div>
   </div>
 );

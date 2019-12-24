@@ -28,18 +28,35 @@ const AddNumberToBingo = gql`
   }
 `;
 
+const BingoAction = gql`
+    mutation BingoAction {
+        insert_bingo(objects: {}) {
+            affected_rows
+        }
+    }
+`;
+
 const Home = () => {
   const [addToBingo] = useMutation(AddNumberToBingo);
+  const [bingoAction] = useMutation(BingoAction);
   const { data } = useSubscription(GetBingoHistory);
-  const history = data?.bingo[0]?.history?.map(({ number }) => number) || [];
+  const bingo = data?.bingo[0] || {};
+  const history = bingo?.history?.map(({ number }) => number) || [];
   const setHistory = async (number) => {
-    await addToBingo({ variables: { bingo: 1, number } });
-  }
+    await addToBingo({ variables: { bingo: bingo.id, number } });
+  };
+  const newBingo = async () => {
+    await bingoAction();
+  };
 
   return (
     <>
       <BrowserView>
-        <DesktopHome history={history} setHistory={setHistory} />
+        <DesktopHome
+          history={history}
+          setHistory={setHistory}
+          newBingo={newBingo}
+        />
       </BrowserView>
       <MobileView>
         <MobileHome history={history} />
