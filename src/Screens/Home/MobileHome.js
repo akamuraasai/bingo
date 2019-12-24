@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MobileHeader, Board } from './Components';
+import { MobileHeader, Board, Ticket } from './Components';
 import './Home.css';
 
 const MobileHome = ({ history }) => {
@@ -14,12 +14,7 @@ const MobileHome = ({ history }) => {
         </div>
 
         {tickets.length > 0 && tickets.map((ticket, ix) => (
-          <div className="ticket">
-            <h3>Cartela #{ix + 1}</h3>
-            <div className="boardContainer" key={ix.toString()}>
-              <Board history={history} numbers={ticket} />
-            </div>
-          </div>
+          <Ticket history={history} ticket={ticket} index={(ix + 1).toString()} />
         ))}
       </main>
     </div>

@@ -5,3 +5,4 @@ export { Button } from './Button';
 export { MobileHeader } from './MobileHeader';
 export { LastNumbersBar } from './LastNumbersBar';
 export { Modal } from './Modal';
+export { Ticket } from './Ticket';
