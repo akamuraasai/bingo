@@ -12,7 +12,7 @@ const Ticket = ({ history, ticket: { id, numbers } }) => {
   const [selected, setSelected] = useState([]);
   const markedQuantity = checkMarked(history, numbers);
   if (markedQuantity === 24) {
-    alert(`Você fez bingo na cartela #${pad(id)}!`);
+    // alert(`Você fez bingo na cartela #${pad(id)}!`);
   }
 
   return (
