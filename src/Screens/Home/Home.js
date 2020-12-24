@@ -84,7 +84,7 @@ const Home = () => {
         setUser(JSON.parse(savedUser));
       }
     })();
-  }, []);
+  }, [createUser]);
 
   return (
     <>
