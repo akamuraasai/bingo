@@ -26,16 +26,25 @@ const getNumbers = (numbers = []) => {
     : getNumbers(numbers);
 };
 
+let creating = false;
+
 const generateTicket = (createTicket, bingo_id, hasTicket) => async () => {
   if (hasTicket) {
     alert('Somente uma cartela por pessoa!');
     return;
   }
+
+  if (creating) {
+    return;
+  }
+
+  creating = true;
   const generatedNumbers = getNumbers().sort((a, b) => a - b);
   const numbers = JSON.stringify(generatedNumbers);
   const user = localStorage.getItem('user');
   const { id: user_id } = JSON.parse(user);
   await createTicket({ variables: { bingo_id, user_id, numbers } });
+  creating = false;
 };
 
 const MobileHeader = ({ history, bingoId, hasTicket }) => {
